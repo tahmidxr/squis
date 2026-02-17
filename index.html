@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>কুইজ মেশিন</title>
+    <!-- Using Tailwind via CDN for simplicity in this setup, 
+         though installing via npm is recommended for larger production apps -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                green: '#1CAB55',
+                red: '#8B0000', // Deep dark red
+                cream: '#FDFBF7', // Light cream white
+                dark: '#1a1a1a',
+              }
+            },
+            fontFamily: {
+              sans: ['Hind Siliguri', 'sans-serif'],
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.95)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+              'scale-in': 'scaleIn 0.3s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Hind Siliguri', sans-serif;
+        background-color: #FDFBF7;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "firebase/": "https://esm.sh/firebase@^12.9.0/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-DmUIGLvb.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Vite Entry Point -->
+  </body>
+</html>
